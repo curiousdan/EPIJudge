@@ -1,9 +1,14 @@
 from test_framework import generic_test
 
-
+# 12/19/20
 def swap_bits(x, i, j):
-    # TODO - you fill in here.
-    return 0
+    # x is the number
+    # i and j are index locations (from lowest bit)
+    if (x >> i) & 1 != (x >> j) & 1:
+    	i_bit = 1 << i 
+    	j_bit = 1 << j
+    	x ^= i_bit | j_bit
+    return x
 
 
 if __name__ == '__main__':
